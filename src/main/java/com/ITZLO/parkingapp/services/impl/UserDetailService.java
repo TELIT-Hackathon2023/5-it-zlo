@@ -21,8 +21,8 @@ public class UserDetailService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("User with email: "+username+" not found"));
         return org.springframework.security.core.userdetails.User.builder()
                 .username(user.getEmail())
-                .password(user.getPassword())
                 .authorities("USER")
+                .password(user.getPassword())
                 .build();
     }
 }
