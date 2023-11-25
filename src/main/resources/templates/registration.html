@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/registration}" method="post">
+        <label>Name:</label>
+        <input type="text" name="name"/><br/>
+        <label>Surname:</label>
+        <input type="text" name="surname"/><br/>
+        <label>Email:</label>
+        <input type="text" name="email"/><br/>
+        <label>licence_plate_number:</label>
+        <input type="text" name="licence_plate_number"/><br/>
+        <label>company_card:</label>
+        <input type="text" name="company_card"/><br/>
+        <label>password:</label>
+        <input type="password" name="password"/><br/>
+        <input type="submit" value="Register"/>
+    </form>
+</body>
+</html>
