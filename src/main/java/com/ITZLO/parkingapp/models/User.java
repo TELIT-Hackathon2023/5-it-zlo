@@ -1,10 +1,7 @@
 package com.ITZLO.parkingapp.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -15,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class User implements Serializable{
     @Id
     @SequenceGenerator(
@@ -26,7 +24,7 @@ public class User implements Serializable{
             strategy = GenerationType.SEQUENCE,
             generator = "user_seq"
     )
-    private int id;
+    private Integer id;
 
     private String name;
     private String surname;
@@ -35,5 +33,4 @@ public class User implements Serializable{
     private String licence_plate_number;
     private String company_card;
     private String password;
-
 }
