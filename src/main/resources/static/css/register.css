@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    color:#ffffff;
+    height: 100vh; /* Full viewport height */
+    font-family: 'Arial', sans-serif;
+    background: url('images/register-background.jpg') no-repeat center center fixed;
+    background-size: cover; /* Cover the entire viewport */
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.form-step {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-field {
+    background: rgba(255, 255, 255, 0); /* Fully transparent background */
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc; /* You may want to change this as well */
+    overflow: hidden;
+    display: flex;
+}
+
+
+.form-field input {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+input, select, textarea{
+    color: #ffffff;
+}
+
+label {
+    display: none; /* Hide the label as it is not visible in the design */
+}
+
+.next-btn {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+    background-color: #e6b800;
+}

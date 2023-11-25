@@ -2,14 +2,35 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Parking Application Form</title>
+    <link rel="stylesheet" href="/css/parking.css">
 </head>
 <body>
-    <form th:action="@{/registration}" method="get">
-        <input type="submit" value="find">
-    </form>
-    <form th:action="@{/mapa}" method="get">
-        <input type="submit" value="mapa">
-    </form>
+<form th:action="@{/registration}" method="get">
+    <input type="submit" value="find">
+</form>
+
+<div class="square" id="square1"></div>
+<div class="square" id="square2"></div>
+
+<!--<img src="45-1.png" alt="parking">-->
+<img src="/css/images/parking.png" alt="parking">
+
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Бронирование места</p>
+        <form id="bookingForm">
+            <label for="startTime">Время начала:</label>
+            <input type="time" id="startTime" name="startTime"><br><br>
+            <label for="endTime">Время окончания:</label>
+            <input type="time" id="endTime" name="endTime"><br><br>
+            <input type="button" id="bookButton" value="Забронировать">
+        </form>
+    </div>
+</div>
+
+<script src="/js/main.js?v=1"></script>
+
 </body>
 </html>

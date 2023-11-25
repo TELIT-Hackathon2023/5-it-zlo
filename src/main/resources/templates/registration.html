@@ -1,24 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Parking Application Form</title>
+    <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
+<div class="form-container">
     <form th:action="@{/registration}" method="post">
-        <label>Name:</label>
-        <input type="text" name="name"/><br/>
-        <label>Surname:</label>
-        <input type="text" name="surname"/><br/>
-        <label>Email:</label>
-        <input type="text" name="email"/><br/>
-        <label>licence_plate_number:</label>
-        <input type="text" name="licence_plate_number"/><br/>
-        <label>company_card:</label>
-        <input type="text" name="company_card"/><br/>
-        <label>password:</label>
-        <input type="password" name="password"/><br/>
-        <input type="submit" value="Register"/>
+        <div class="form-step active" data-step="1">
+            <div class="form-field">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" autocomplete="off" placeholder="First Name" name="name" required>
+            </div>
+            <div class="form-field">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" autocomplete="off" placeholder="Last Name" name="surname" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" autocomplete="off" placeholder="Email" name="email" required>
+            </div>
+            <div class="form-field">
+                <label for="licence-plate-number">License Plate Number</label>
+                <input type="text" id="licence-plate-number" autocomplete="off" placeholder="License Plate Number" name="licence_plate_number" required>
+            </div>
+            <div class="form-field">
+                <label for="company-card">Company Card</label>
+                <input type="text" id="company-card" autocomplete="off" placeholder="Company Card" name="company_card" required>
+            </div>
+            <div class="form-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" autocomplete="off" placeholder="Password" name="password" required>
+            </div>
+            <button type="submit" class="next-btn">Register</button>
+        </div>
+        <!-- Repeat for other steps if necessary -->
     </form>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

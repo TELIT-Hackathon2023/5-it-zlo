@@ -13,6 +13,11 @@ public class SecurityController {
 
     private final UserService userService;
 
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
+
     @GetMapping("/mapa")
     public String mapa(){
         return "map";
@@ -20,7 +25,7 @@ public class SecurityController {
 
     @GetMapping("/")
     public String home(){
-        return "index";
+        return "registration";
     }
 
     @GetMapping("/registration")
@@ -29,8 +34,10 @@ public class SecurityController {
     }
 
     @PostMapping("/registration")
-    public String registration(RegistrationModel registration){
+    public String registration(RegistrationModel registration) {
         userService.registerUserByRegistrationModel(registration);
-        return "index";
+        // Use "redirect:" prefix to send a redirect rather than just returning a view name
+        return "redirect:/index";
     }
+
 }
